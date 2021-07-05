@@ -1,6 +1,5 @@
 # NODDI singularity
-Singularity containerized version of the NODDI toolbox.
-
+Singularity containerized version of the NODDI toolbox. [NODDI matlab toolbox](http://mig.cs.ucl.ac.uk/index.php?n=Tutorial.NODDImatlab) is a MatLab based toolbox developed by Prof Gary Zang for fitting NODDI data. Since the tool requires MatLab, it cannot be deplyed on High-Performance Computing (HPC) clusters that do not have MatLab installed on it. This NODDI singularity container provides an alternative option to run NODDI without MATLAB and can be readily deployed in most HCP clusters. For this container, we are using the single thread option of the NODDI matlab toolbox because the parallel toolbox implementation requires an additional Matlab licence. The single thread version takes more than the parallel version. However, this delay could be compensated when deployed in HPC where many images could be processed in parallel. (Eg. (inculde the deails abouts nof of voxles) NODDI processing using parrell tool box in local machine with 8 core takes ~ 3 hours. Thats 300 Hours for 100 subjets. The single thread version takes ~18 hours. However, 100 subjects could be launched in the HCP parallely.)
 
 ### Authors
 - Siya Sherif, `s.sherif_at_uliege.be`
