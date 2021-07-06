@@ -44,7 +44,7 @@ Example
     
 To run the [NODDI example dataset](http://mig.cs.ucl.ac.uk/index.php?n=Tutorial.NODDImatlab)
 
-Download the dataset from the above page 
+Download the dataset from this above link 
 
 ```
 singularity run --cleanenv \
