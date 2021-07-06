@@ -2,7 +2,7 @@ function ss_noddi(NODDI_DWI,brain_mask,NODDI_roi,bval,bvec,fitpar_mat,vol_par_ma
 % Siya Sherif, Martin Grignard, and Christophe Phillips. 2021.
 % NODDI processsing using singularity
 % Create a runtime compiler for the NODDI toolbox
-%
+% This is the main function (the one which is compiled)
 % june 2021 : version 1.0 
 % -------------------------------------------------------------------------
 % this code requires
