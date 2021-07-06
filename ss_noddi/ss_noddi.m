@@ -48,7 +48,7 @@ end
 % need to remove the SPM path (NODDI recommends it). 
 % rmpath(genpath(spm('Dir'))) % remove SPM path 
 
-% remove all other paths other than the require ones  
+% remove all other paths (other than NODDI_toolbox and nifti matlab)  
 
 % uncomment if you want to test it locally. 
 % addpath(genpath('/media/siya/CRC_DATA_ss/test_octave/ss_noddi/NODDI_toolbox_v1.04/'));
