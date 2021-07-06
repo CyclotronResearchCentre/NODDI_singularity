@@ -16,9 +16,9 @@ addpath(genpath('/path-to/nifti_matlab/'));
 
 % makes sure to remove all other add path before compilation 
 
-% define input file and out directory (pwd since I am runing this in the current directory) 
-appFile = fullfile(pwd,'ss_noddi.m');
-OutDir  = fullfile(pwd,'ss_noddi_App');
+% define input file and out directory
+appFile = fullfile('path-to','ss_noddi.m');
+OutDir  = fullfile('path-to','ss_noddi_App');
 
 % compile and create standalone app. Require MATLAB 2020b, Runtime Compiler v99 
 % older version could use "mcc". I havent tested it. If you are testing other versions 
