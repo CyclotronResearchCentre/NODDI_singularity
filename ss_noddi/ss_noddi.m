@@ -7,7 +7,7 @@ function ss_noddi(NODDI_DWI,brain_mask,NODDI_roi,bval,bvec,fitpar_mat,vol_par_ma
 % -------------------------------------------------------------------------
 % this code requires
 %
-% 1. NODDI_toolbox_v1.04 :  http://mig.cs.ucl.ac.uk/index.php?n=Tutorial.NODDImatlab
+% 1. NODDI_toolbox_v1.05 :  http://mig.cs.ucl.ac.uk/index.php?n=Tutorial.NODDImatlab
 % Zhang, Hui, et al. "NODDI: practical in vivo neurite orientation dispersion 
 % and density imaging of the human brain." Neuroimage 61.4 (2012): 1000-1016.
 %
