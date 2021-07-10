@@ -6,6 +6,8 @@ Singularity containerized version of the NODDI toolbox. [NODDI matlab toolbox](h
 - Martin Grignard, `mar.grignard_at_uliege.be`
 - Christophe Phillips, `c.phillips_at_uliege.be`
 
+
+
 # To create NODDI container 
 
 The container can be built locally on a machine where Singularity is available 
@@ -13,6 +15,13 @@ The container can be built locally on a machine where Singularity is available
     singularity build noddi-singularity.sif singularity-ss-noddi.def
 
 The singularity image can be dowloaded from [OSF](https://osf.io/m2w6y/)
+
+cite us, if you use the container
+```
+Zhang, H., Schneider, T., Wheeler-Kingshott, C. A., & Alexander, D. C. (2012). NODDI: practical in vivo neurite orientation dispersion and density imaging of the human brain. NeuroImage, 61(4), 1000–1016.
+
+Sherif, S., Grignard, M., & Phillips, C. (2021, July 5). noddi-singularity DOI 10.17605/OSF.IO/M2W6Y
+```
 
 # Run the container 
 
@@ -35,7 +44,7 @@ Example
     
 To run the [NODDI example dataset](http://mig.cs.ucl.ac.uk/index.php?n=Tutorial.NODDImatlab)
 
-Download the dataset from the above page 
+Download the dataset from this above link 
 
 ```
 singularity run --cleanenv \

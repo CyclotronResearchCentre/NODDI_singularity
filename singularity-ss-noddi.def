@@ -7,7 +7,7 @@ From: ubuntu:focal
 
     matlab verison 2020b
 
-    using NODDI_toolbox_v1.04 : Gary Zang (UCL) http://mig.cs.ucl.ac.uk/index.php?n=Tutorial.NODDImatlab
+    using NODDI_toolbox_v1.05 : Gary Zang (UCL) http://mig.cs.ucl.ac.uk/index.php?n=Tutorial.NODDImatlab
      
 
 %setup

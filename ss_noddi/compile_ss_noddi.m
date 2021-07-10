@@ -8,7 +8,7 @@ function compile_ss_noddi()
 % -------------------------------------------------------------------------
 % Copyrigh @ GIGA CRC ULiege 
 
-% download the NODDI_toolbox_v1.04 and nifti_matlab
+% download the NODDI_toolbox_v1.05 and nifti_matlab
 
 % addpath to tthe path  
 addpath(genpath('/path-to-/NODDI_toolbox_v1.04/'));
