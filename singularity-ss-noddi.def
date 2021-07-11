@@ -14,13 +14,14 @@ From: ubuntu:focal
 	mkdir -p /opt/ss_noddi
 
 %files
-    ss_noddi_App /opt/ss_noddi/
+    # if using local 
+    # ss_noddi_App /opt/ss_noddi/
 
 %post
     # upadate the packages 
     apt-get update -y
     DEBIAN_FRONTEND=noninteractive apt-get -y install \
-        wget unzip zip openjdk-8-jre xvfb
+        wget unzip zip git openjdk-8-jre xvfb
     apt-get clean
 
     # MATLAB Compiled runtime
@@ -39,8 +40,18 @@ From: ubuntu:focal
 
     #ls /opt/ss_noddi/
     #ls /opt/ss_noddi/ss_noddi_App/run_ss_noddi_run.sh
-    chmod ugo+rx /opt/ss_noddi/ss_noddi
 
+    # 
+    # get the noddi standalone from the git branch
+    wget -nv -P /opt/ss_noddi https://github.com/CyclotronResearchCentre/NODDI_singularity/archive/refs/heads/ss_dev.zip
+    unzip -q /opt/ss_noddi/ss_dev.zip -d /opt/ss_noddi_tmp
+    cp -r /opt/ss_noddi_tmp/NODDI_singularity-ss_dev/ss_noddi_App/* /opt/ss_noddi/
+
+    rm -rf /opt/ss_noddi/ss_dev.zip
+    rm -rf /opt/ss_noddi_tmp
+
+    chmod ugo+rx /opt/ss_noddi/ss_noddi
+    chmod ugo+rx /opt/ss_noddi/run_ss_noddi.sh
 %environment
 
 
@@ -58,7 +69,7 @@ From: ubuntu:focal
     /In_fold/<NODDI_roi> \
     /In_fold/<bval> \
     /In_fold/<bvecs> \
-    /In_fold/<FittedParams.mat>
+    /In_fold/<FittedParams.mat> \
     /in_fold/<output_map>
 
 
