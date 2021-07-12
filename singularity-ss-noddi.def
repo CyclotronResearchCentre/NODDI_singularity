@@ -1,0 +1,75 @@
+Bootstrap: docker
+From: ubuntu:focal
+
+%labels
+    AUTHOR siya sherif GIGA-CRC ivi ULiege 
+    noddi-singularity version 1.0
+
+    matlab verison 2020b
+
+    using NODDI_toolbox_v1.05 : Gary Zang (UCL) http://mig.cs.ucl.ac.uk/index.php?n=Tutorial.NODDImatlab
+     
+
+%setup
+	mkdir -p /opt/ss_noddi
+
+%files
+    # if using local 
+    # ss_noddi_App /opt/ss_noddi/
+
+%post
+    # upadate the packages 
+    apt-get update -y
+    DEBIAN_FRONTEND=noninteractive apt-get -y install \
+        wget unzip zip git openjdk-8-jre xvfb
+    apt-get clean
+
+    # MATLAB Compiled runtime
+    # create folder 
+    mkdir /MCR 
+    # get file 
+    wget -nv -P /MCR https://ssd.mathworks.com/supportfiles/downloads/R2020b/Release/5/deployment_files/installer/complete/glnxa64/MATLAB_Runtime_R2020b_Update_5_glnxa64.zip
+    # unzip 
+    unzip -q /MCR/MATLAB_Runtime_R2020b_Update_5_glnxa64.zip -d /MCR/MCR_R2020b_tmp
+    # run install
+    /MCR/MCR_R2020b_tmp/install -mode silent -agreeToLicense yes
+    rm -r /MCR/MCR_R2020b_tmp /MCR/MATLAB_Runtime_R2020b_Update_5_glnxa64.zip
+    rmdir /MCR
+
+    mkdir /In_fold && mkdir /Out_fold
+
+    #ls /opt/ss_noddi/
+    #ls /opt/ss_noddi/ss_noddi_App/run_ss_noddi_run.sh
+
+    # 
+    # get the noddi standalone from the git branch
+    wget -nv -P /opt/ss_noddi https://github.com/CyclotronResearchCentre/NODDI_singularity/archive/refs/heads/ss_dev.zip
+    unzip -q /opt/ss_noddi/ss_dev.zip -d /opt/ss_noddi_tmp
+    cp -r /opt/ss_noddi_tmp/NODDI_singularity-ss_dev/ss_noddi_App/* /opt/ss_noddi/
+
+    rm -rf /opt/ss_noddi/ss_dev.zip
+    rm -rf /opt/ss_noddi_tmp
+
+    chmod ugo+rx /opt/ss_noddi/ss_noddi
+    chmod ugo+rx /opt/ss_noddi/run_ss_noddi.sh
+%environment
+
+
+%runscript
+    bash /opt/ss_noddi/run_ss_noddi.sh \
+    /usr/local/MATLAB/MATLAB_Runtime/v99 "$@"
+
+%help 
+    to run this container 
+    singularity run --cleanenv \
+    --bind <your_folder>:/In_fold \
+    noddi-singularity.sif \
+    /In_fold/<NODDI image> \
+    /In_fold/<brain_mask> \
+    /In_fold/<NODDI_roi> \
+    /In_fold/<bval> \
+    /In_fold/<bvecs> \
+    /In_fold/<FittedParams.mat> \
+    /in_fold/<output_map>
+
+
