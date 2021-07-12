@@ -11,7 +11,7 @@ function compile_ss_noddi()
 % download the NODDI_toolbox_v1.05 and nifti_matlab
 
 % addpath to tthe path  
-addpath(genpath('/path-to-/NODDI_toolbox_v1.04/'));
+addpath(genpath('/path-to-/NODDI_toolbox_v1.05/'));
 addpath(genpath('/path-to/nifti_matlab/'));
 
 % makes sure to remove all other add path before compilation 
