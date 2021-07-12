@@ -15,7 +15,16 @@ The container can be built locally on a machine where Singularity is available
 
     singularity build noddi-singularity.sif singularity-ss-noddi.def
 
-The singularity image can be dowloaded from [OSF](https://osf.io/m2w6y/)
+The singularity image can be dowloaded from [sylabs](https://cloud.sylabs.io/library/sher_ss/default/noddi-singularity)
+
+or 
+
+```
+# Pull with Singularity
+$ singularity pull --arch amd64 library://sher_ss/default/noddi-singularity:1.0.1
+# Pull by unique ID (reproducible even if tags change)
+$ singularity pull library://sher_ss/default/noddi-singularity:sha256.6f5e08a8c425199cb1c1a48cef7cd03c9d39b59d3a862ad2ba780792d26d73ac
+```
 
 cite us, if you use the container
 ```
