@@ -33,21 +33,18 @@ From: ubuntu:focal
     unzip -q /MCR/MATLAB_Runtime_R2020b_Update_5_glnxa64.zip -d /MCR/MCR_R2020b_tmp
     # run install
     /MCR/MCR_R2020b_tmp/install -mode silent -agreeToLicense yes
+    # delete residuals 
     rm -r /MCR/MCR_R2020b_tmp /MCR/MATLAB_Runtime_R2020b_Update_5_glnxa64.zip
     rmdir /MCR
 
     mkdir /In_fold && mkdir /Out_fold
 
-    #ls /opt/ss_noddi/
-    #ls /opt/ss_noddi/ss_noddi_App/run_ss_noddi_run.sh
-
-    # 
     # get the noddi standalone from the git branch
-    wget -nv -P /opt/ss_noddi https://github.com/CyclotronResearchCentre/NODDI_singularity/archive/refs/heads/ss_dev.zip
-    unzip -q /opt/ss_noddi/ss_dev.zip -d /opt/ss_noddi_tmp
-    cp -r /opt/ss_noddi_tmp/NODDI_singularity-ss_dev/ss_noddi_App/* /opt/ss_noddi/
+    wget -nv -P /opt/ss_noddi https://github.com/CyclotronResearchCentre/NODDI_singularity/archive/refs/heads/main.zip
+    unzip -q /opt/ss_noddi/main.zip -d /opt/ss_noddi_tmp
+    cp -r /opt/ss_noddi_tmp/NODDI_singularity-main/ss_noddi_App/* /opt/ss_noddi/
 
-    rm -rf /opt/ss_noddi/ss_dev.zip
+    rm -rf /opt/ss_noddi/main.zip
     rm -rf /opt/ss_noddi_tmp
 
     chmod ugo+rx /opt/ss_noddi/ss_noddi
