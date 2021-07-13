@@ -30,7 +30,7 @@ cite us, if you use the container
 ```
 Zhang, H., Schneider, T., Wheeler-Kingshott, C. A., & Alexander, D. C. (2012). NODDI: practical in vivo neurite orientation dispersion and density imaging of the human brain. NeuroImage, 61(4), 1000–1016.
 
-Sherif, S., Grignard, M., & Phillips, C. (July 12, 2021). noddi-singularity DOI:10.5281/zenodo.5093701
+Sherif, S., Grignard, M., & Phillips, C. (July 12, 2021). noddi-singularity Zenodo doi:10.5281/zenodo.5093701
 
 ```
 
