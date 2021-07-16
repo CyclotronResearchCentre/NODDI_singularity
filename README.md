@@ -15,7 +15,7 @@ The container can be built locally on a machine where Singularity is available
 
     singularity build noddi-singularity.sif singularity-ss-noddi.def
 
-The singularity image can be dowloaded from [sylabs](https://cloud.sylabs.io/library/sher_ss/default/noddi-singularity)
+The singularity image can be dowloaded from [zenodo](https://doi.org/10.5281/zenodo.5093701) or [sylabs](https://cloud.sylabs.io/library/sher_ss/default/noddi-singularity) 
 
 or 
 
