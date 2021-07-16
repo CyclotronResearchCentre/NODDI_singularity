@@ -51,8 +51,8 @@ end
 % remove all other paths (other than NODDI_toolbox and nifti matlab)  
 
 % uncomment if you want to test it locally. 
-% addpath(genpath('/media/siya/CRC_DATA_ss/test_octave/ss_noddi/NODDI_toolbox_v1.04/'));
-% addpath(genpath('/media/siya/CRC_DATA_ss/test_octave/ss_noddi/nifti_matlab/'));
+% addpath(genpath('<path_to>/NODDI_toolbox_v1.05/'));
+% addpath(genpath('<path_to>/nifti_matlab/'));
 
 % create ROI
 CreateROI(NODDI_DWI,brain_mask,NODDI_roi);
