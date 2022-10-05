@@ -48,7 +48,7 @@ singularity run --cleanenv \
     /In_fold/<bval> \
     /In_fold/<bvecs> \
     /In_fold/<FittedParams.mat>
-    /in_fold/<output_map>
+    /In_fold/<output_map>
 ```
 
 Example 
