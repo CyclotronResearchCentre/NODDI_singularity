@@ -71,3 +71,4 @@ singularity run --cleanenv \
 ```
 
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5093701.svg)](https://doi.org/10.5281/zenodo.5093701)
