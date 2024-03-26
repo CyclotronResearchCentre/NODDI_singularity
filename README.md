@@ -47,7 +47,7 @@ singularity run --cleanenv \
     /In_fold/<NODDI_roi> \
     /In_fold/<bval> \
     /In_fold/<bvecs> \
-    /In_fold/<FittedParams.mat>
+    /In_fold/<FittedParams.mat> \
     /In_fold/<output_map>
 ```
 
@@ -66,7 +66,7 @@ singularity run --cleanenv \
     /In_fold/NODDI_roi.mat\
     /In_fold/NODDI_protocol.bval \
     /In_fold/NODDI_protocol.bvec \
-    /In_fold/FittedParams.mat
+    /In_fold/FittedParams.mat \
     /In_fold/example
 ```
 
