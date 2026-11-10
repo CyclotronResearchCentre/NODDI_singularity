@@ -1,6 +1,6 @@
 # NODDI singularity
 
-Singularity containerized version of the NODDI toolbox. [NODDI matlab toolbox](http://mig.cs.ucl.ac.uk/index.php?n=Tutorial.NODDImatlab) is a MatLab based toolbox developed by Prof Gary Zang for fitting NODDI data. Since the tool requires MatLab, it cannot be deplyed on High-Performance Computing (HPC) clusters that do not have MatLab installed on it. This NODDI singularity container provides an alternative option to run NODDI without MATLAB and can be readily deployed in most HCP clusters. For this container, we are using the single thread option of the NODDI matlab toolbox because the Parallel Computing Toolbox implementation requires an additional Matlab licence. The single thread version takes more time than the parallel version. However, this delay could be compensated when deployed in HPC where many images could be processed in parallel. (Eg. NODDI processing using Parallel Computing Toolbox to fit NODDI data with 220454 voxels in local machine using 8 parallel core takes ~ 3 hours. Thats 300 Hours for 100 subjets. The single thread version takes ~18 hours per subject. However, 100 subjects could be launched parallely in the HCP clusters.)
+Singularity containerized version of the NODDI toolbox. [NODDI matlab toolbox](https://www.nitrc.org/projects/noddi_toolbox) is a MatLab based toolbox developed by [Prof. Gary Zang](https://profiles.ucl.ac.uk/11821) for fitting NODDI data. Since the tool requires MatLab, it cannot be deplyed on High-Performance Computing (HPC) clusters that do not have MatLab installed on it. This NODDI singularity container provides an alternative option to run NODDI without MATLAB and can be readily deployed in most HCP clusters. For this container, we are using the single thread option of the NODDI matlab toolbox because the Parallel Computing Toolbox implementation requires an additional Matlab licence. The single thread version takes more time than the parallel version. However, this delay could be compensated when deployed in HPC where many images could be processed in parallel. (Eg. NODDI processing using Parallel Computing Toolbox to fit NODDI data with 220454 voxels in local machine using 8 parallel core takes ~ 3 hours. That's 300 Hours for 100 subjets. The single thread version takes ~18 hours per subject. However, 100 subjects could be launched parallely in the HCP clusters.)
 
 ### Authors
 - Siya Sherif, `s.sherif_at_uliege.be`
@@ -15,7 +15,7 @@ The container can be built locally on a machine where Singularity is available
 
     singularity build noddi-singularity.sif singularity-ss-noddi.def
 
-The singularity image can be dowloaded from [zenodo](https://doi.org/10.5281/zenodo.5093701) or [sylabs](https://cloud.sylabs.io/library/sher_ss/default/noddi-singularity) 
+The singularity image can be dowloaded from [zenodo](https://doi.org/10.5281/zenodo.5093701) 
 
 or 
 
@@ -53,7 +53,7 @@ singularity run --cleanenv \
 
 Example 
     
-To run the [NODDI example dataset](http://mig.cs.ucl.ac.uk/index.php?n=Tutorial.NODDImatlab)
+To run the [NODDI example dataset](https://www.nitrc.org/frs/download.php/11758/NODDI_example_dataset.zip)
 
 Download the dataset from the above link 
 
